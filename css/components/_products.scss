@@ -1,0 +1,27 @@
+@use '../abstracts/mixins' as mix;
+@use "../abstracts/variables" as var;
+@use 'sass:math';
+
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    .product{
+        flex-basis: 25%;
+        margin-bottom: math.div(var.$gutter-base, 1.5);;
+        .inner-product{
+            margin-right: math.div(var.$gutter-base, 1.5);
+            padding: var.$gutter-base*1.5 math.div(var.$gutter-base, 1.5);
+            border: 1px solid var.$text-color-base;
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+
+            .delete-checkbox{
+                position: absolute;
+                left: 20px;
+                top: 20px;
+            }
+        }
+    }
+}

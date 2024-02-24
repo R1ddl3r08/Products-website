@@ -1,0 +1,7 @@
+@use '../abstracts/mixins' as mix;
+@use "../abstracts/variables" as var;
+@use 'sass:math';
+
+.product-add-container{
+    padding: 0px math.div(var.$gutter-base, 1.5);
+}

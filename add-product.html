@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product add</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+</head>
+<body>
+<nav class="index-nav">
+        <h1>Product List</h1>
+        <div class="actions">
+            <a href="./index.html" class="button danger">Cancel</a>
+            <button class="primary" id="submit_form_button">Save</button>
+        </div>
+   </nav>
+   <main class="product-add-container">
+        <form action="" id="product_form">
+            <div class="form-group">
+                <div class="inner-form-group">
+                    <label for="sku">SKU</label>
+                    <input type="text" id="sku" class="form-control" name="sku">
+                </div>
+                <span class="error-message" id="sku-error"></span>
+            </div>
+            <div class="form-group">
+                <div class="inner-form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" name="name">
+                </div>
+                <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="form-group">
+                <div class="inner-form-group">
+                    <label for="price">Price</label>
+                    <input type="text" id="price" class="form-control" name="price">
+                </div>
+                <span class="error-message" id="price-error"></span>
+            </div>
+            <div class="form-group">
+                <div class="inner-form-group">
+                    <label for="productType">Type Switcher</label>
+                    <select id="productType" name="product-type" class="form-control">
+                        <option value="0">Type switcher</option>
+                        <option value="DVD">DVD</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Book">Book</option>
+                    </select>
+                </div>
+                <span class="error-message" id="product-type-error"></span>
+            </div>
+            <div id="DVD" class="additional-form-group">
+                <div class="form-group">
+                    <div class="inner-form-group">
+                        <label for="size">Size(MB)</label>
+                        <input type="number" id="size" name="size" class="form-control">
+                    </div>
+                    <span class="error-message" id="size-error"></span>
+                </div>
+                <p>Please provide DVD size in MB</p>
+            </div>
+            <div id="Furniture" class="additional-form-group">
+                <div class="form-group">
+                    <div class="inner-form-group">
+                        <label for="height">Height(CM)</label>
+                        <input type="number" id="height" name="height" class="form-control">
+                    </div>
+                    <span class="error-message" id="height-error"></span>
+                </div>
+                <div class="form-group">
+                    <div class="inner-form-group">
+                        <label for="width">Width(CM)</label>
+                        <input type="number" id="width" name="width" class="form-control">
+                    </div>
+                    <span class="error-message" id="width-error"></span>
+                </div>
+                <div class="form-group">
+                    <div class="inner-form-group">
+                        <label for="length">Length(CM)</label>
+                        <input type="number" id="length" name="length" class="form-control">
+                    </div>
+                    <span class="error-message" id="length-error"></span>
+                </div>
+                <p>Please provide dimensions in HxWxL format</p>
+            </div>
+            <div id="Book" class="additional-form-group">
+                <div class="form-group">
+                    <div class="inner-form-group">
+                        <label for="weight">Weight(KG)</label>
+                        <input type="number" id="weight" name="weight" class="form-control">
+                    </div>
+                    <span class="error-message" id="weight-error"></span>
+                </div>
+                <p>Please provide Book weight in KG</p>
+            </div>
+            <input type="submit" hidden>
+        </form>
+   </main>
+   <footer>
+        <p>Scandiweb Test assignment</p>
+   </footer>
+   <script src="./js/productAdd.js"></script>
+</body>
+</html>
